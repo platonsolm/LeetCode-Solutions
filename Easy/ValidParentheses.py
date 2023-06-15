@@ -2,8 +2,8 @@ class Solution:
     def isValid(self, s: str) -> bool:
         chars, brackets = [], {')': '(', '}': '{', ']': '['}
         for char in s:
-            if char in brackets:
-                if not chars or chars.pop() != brackets.get(char):
+            if brackets.__contains__(char):
+                if not chars or chars.pop() != brackets.__getitem__(char):
                     return False
             else:
                 chars.append(char)
