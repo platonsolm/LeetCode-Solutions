@@ -4,7 +4,7 @@ class Solution:
         for i, num in enumerate(nums):
             if target - num in num_dict:
                 return [num_dict.get(target - num), i]
-            num_dict[num] = i
+            num_dict.__setitem__(num, i)
 
 
 if __name__ == '__main__':
