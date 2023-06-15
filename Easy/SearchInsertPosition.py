@@ -1,6 +1,6 @@
 class Solution:
     def searchInsert(self, nums: list[int], target: int) -> int:
-        return nums.index(target) if target in nums else sorted(nums + [target]).index(target)
+        return nums.index(target) if nums.__contains__(target) else sorted(nums + [target]).index(target)
 
 
 if __name__ == '__main__':
