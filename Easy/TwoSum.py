@@ -2,7 +2,7 @@ class Solution:
     def twoSum(self, nums: list[int], target: int) -> list[int]:
         num_dict = dict()
         for i, num in enumerate(nums):
-            if target - num in num_dict:
+            if num_dict.__contains__(target - num):
                 return [num_dict.get(target - num), i]
             num_dict.__setitem__(num, i)
 
