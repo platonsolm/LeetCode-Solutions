@@ -1,8 +1,8 @@
 class Solution:
     def singleNumber(self, nums: list[int]) -> int:
-        for i in set(nums):
-            if nums.count(i) != 2:
-                return i
+        for num in nums:
+            if nums.count(num) != 2:
+                return num
 
 
 print(f'Example 1: {Solution().singleNumber([2, 2, 1])}\n'
